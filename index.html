@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--* Css Link -->
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+
+    <!--* Header Area -->
+    <header>
+
+        <!--* Navbar Top Area -->
+        <nav class="navbar-top">
+
+            <!--* Navbar Logo -->
+            <div class="logo">
+                <img src="./Images/Logo/ASM_arkaplansiz.png" alt="Logo">
+                <div>ASM Software</div>
+            </div>
+
+            <!--* SearchBar -->
+            <div class="search-bar">
+                <input type="text" placeholder="Aramak istediğiniz dizinin adını yazınız...">
+            </div>
+
+            <!--* SignIn and SignUp Area -->
+            <div class="buttons">
+                <button>Üye Ol</button>
+                <button>Üye Girişi</button>
+            </div>
+        </nav>
+
+        <!--* Navbar Bottom Area -->
+        <nav class="navbar-bottom">
+            <div class="nav-anasayfa">Anasayfa</div>
+            <div class="nav-soneklenenler">Sen Eklenenler</div>
+            <div class="nav-diziarsivi">Dizi Arşivi</div>
+            <div class="nav-encokizlenenler">En Çok İzlenenler</div>
+            <div class="nav-encokbegenilenler">En Çok Beğenilenler</div>
+            <div class="nav-iletisim">İletişim</div>
+            <div class="nav-iletisim">Hakkımızda</div>
+        </nav>
+
+    </header>
+
+    <!--* Main Image Slider Area -->
+    <section class="main-image-slider">
+        <div class="slider">
+            <img src="./Images/MainResim/islergucler-background.jpeg" class="slide" alt="Image 5">
+            <img src="./Images/MainResim/behzatc-background.jpeg" class="slide" alt="Image 2">
+            <img src="./Images/MainResim/ezel-background.jpeg" class="slide" alt="Image 4">
+            <img src="./Images/MainResim/avrupayakasi-background.jpeg" class="slide" alt="Image 1">
+            <img src="./Images/MainResim/cemberimdeguloya-background.jpeg" class="slide" alt="Image 3">
+            <img src="./Images/MainResim/oylebirgecer-background.jpeg" class="slide" alt="Image 6">
+
+            <!-- Buraya istenirse daha fazla resim eklenebilir -->
+        </div>
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    </section>
+
+    <!--* Categories Area -->
+    <section class="categories">
+
+        <!--* Category Box for Series Type -->
+        <div class="category-box" id="dizi-turu-box">
+            <img src="./Images/KategoriResim/dizituru.jpeg" alt="Category Image" id="dizi-turu-image">
+            <h3>Dizi Türü</h3>
+            <select name="dizi-turu" id="dizi-turu" onchange="updateImage('dizi-turu', this.value)">
+                <option value="aile">Aile</option>
+                <option value="aksiyon">Aksiyon</option>
+                <option value="drama">Drama</option>
+                <option value="gerilim">Gerilim</option>
+                <option value="komedi">Komedi</option>
+                <option value="romantik">Romantik</option>
+                <option value="savas">Savaş</option>
+                <option value="suc">Suç</option>
+                <option value="tarih">Tarih</option>
+                <!-- Buraya istenirse daha fazla özellik eklenebilmektedir -->
+            </select>
+        </div>
+
+        <!--* Category Box for Actors Name -->
+        <div class="category-box" id="oyuncu-adi-box">
+            <img src="./Images/KategoriResim/oyuncuadi.jpeg" alt="Category Image" id="oyuncu-adi-image">
+            <h3>Oyuncu Adı</h3>
+            <select name="oyuncu-adi" id="oyuncu-adi" onchange="updateImage('oyuncu-adi', this.value)">
+                <option value="ahmetkural">Ahmet Kural</option>
+                <option value="arasbulutiynemli">Aras Bulut İynemli</option>
+                <option value="aslienver">Aslı Enver</option>
+                <option value="asumandabak">Asuman Dabak</option>
+                <option value="atademirer">Ata Demirer</option>
+                <option value="aycabingol">Ayça Bingöl</option>
+                <option value="berensaat">Beren Saat</option>
+                <option value="berkhakman">Berk Hakman</option>
+                <option value="berkansal">Berkan Şal</option>
+                <option value="bugragulsoy">Buğra Gülsoy</option>
+                <option value="emrealtug">Emre Altuğ</option>
+                <option value="erdalbesikcioglu">Erdal Beşikçioğlu</option>
+                <option value="erdalozyagcilar">Erdal Özyağcılar</option>
+                <option value="erkanpetekkaya">Erkan Petekkaya</option>
+                <option value="farahzeynepabdullah">Farah Zeynep Abdullah</option>
+                <option value="fatihartman">Fatih Artman</option>
+                <option value="gamzeozcelik">Gamze Özçelik</option>
+                <option value="gazanferozcan">Gazanfer Özcan</option>
+                <option value="gokhanmete">Gökhan Mete</option>
+                <option value="gulcinsantircioglu">Gülçin Santırcıoğlu</option>
+                <option value="gulsebirsel">Gülse Birsel</option>
+                <option value="hakangercek">Hakan Gerçek</option>
+                <option value="halukbilginer">Haluk Bilginer</option>
+                <option value="hazalkaya">Hazal Kaya</option>
+                <option value="humeyraakbay">Hümeyra Akbay</option>
+                <option value="inanckonukcu">İnanç Konukçu</option>
+                <option value="ipekbilgin">İpek Bilgin</option>
+                <option value="kenanimirzalioglu">Kenan İmirzalıoğlu</option>
+                <option value="kivanctatlitug">Kıvanç Tatlıtuğ</option>
+                <option value="leventcan">Levent Can</option>
+                <option value="mehmetalinuroglu">Mehmet Ali Nuroğlu</option>
+                <option value="mehmetozgur">Mehmet Özgür</option>
+                <option value="melisasozen">Melisa Sözen</option>
+                <option value="metehorozoglu">Mete Horozoğlu</option>
+                <option value="muratakkoyunlu">Murat Akkoyunlu</option>
+                <option value="muratcemci">Murat Cemci</option>
+                <option value="muratozdemir">Murat Özdemir</option>
+                <option value="muratyildirim">Murat Yıldırım</option>
+                <option value="mustafaavkiran">Mustafa Avkıran</option>
+                <option value="mugeulusoy">Müge Ulusoy</option>
+                <option value="nebahatcehre">Nebahat Çehre</option>
+                <option value="necatisasmaz">Necati Şaşmaz</option>
+                <option value="nejatisler">Nejat İşler</option>
+                <option value="oykukarayel">Öykü Karayel</option>
+                <option value="ozgunamal">Özgü Namal</option>
+                <option value="sadicelilcengiz">Sadi Celil Cengiz</option>
+                <option value="sefazengin">Sefa Zengin</option>
+                <option value="selcukyontem">Selçuk Yöntem</option>
+                <option value="semradincer">Semra Dinçer</option>
+                <option value="serdaryegin">Serdar Yeğin</option>
+                <option value="sebnemsonmez">Şebnem Sönmez</option>
+                <option value="senaygurler">Şenay Gürler</option>
+                <option value="tunaorhan">Tuna Orhan</option>
+                <option value="tuncelkurtiz">Tuncel Kurtiz</option>
+                <option value="turkansoray">Türkan Şoray</option>
+                <option value="umitcirak">Ümit Çırak</option>
+                <option value="vildanatasever">Vildan Atasever</option>
+                <option value="yelizsar">Yeliz Şar</option>
+                <option value="yigitozsener">Yiğit Özşener</option>
+                <!-- Buraya istenirse daha fazla oyuncu eklenebilmektedir -->
+            </select>
+        </div>
+
+        <!--* Category Box for Directors Name -->
+        <div class="category-box" id="yonetmen-adi-box">
+            <img src="./Images/KategoriResim/yonetmenadi.jpeg" alt="Category Image" id="yonetmen-adi-image">
+            <h3>Yönetmen Adı</h3>
+            <select name="yonetman-adi" id="yonetmen-adi" onchange="updateImage('yonetmen-adi', this.value)">
+                <option value="ulucbayraktar">Uluç Bayraktar</option>
+                <option value="gulsebirsel"> Gülse Birsel</option>
+                <option value="serdarakar"> Serdar Akar </option>
+                <option value="doganumitkaraca"> Doğan Ümit Karaca </option>
+                <option value="sadullahsenturk"> Sadullah Şentürk</option>
+                <option value="zeynepgunaytan"> Zeynep Günay Tan</option>
+                <option value="selcukaydemir"> Selçuk Aydemir</option>
+                <option value="caganirmak"> Çağan Irmak </option>
+                <option value="zeyneptor"> Zeynep Tor</option>
+                <option value="boratekay"> Bora Tekay</option>
+                <option value="birkanuz"> Birkan Uz</option>
+                <option value="umurturagay"> Umur Turagay </option>
+                <option value="cagataytosun"> Çağatay Tosun </option>
+                <option value="cagrilostuvali"> Çağrı Lostuvalı </option>
+                <option value="haticememis"> Hatice Memiş</option>
+                <option value="mustafasevkidogan"> Mustafa Şevki Doğan </option>
+                <option value="osmansinav"> Osman Sınav</option>
+                <option value="hilalsaral"> Hilal Saral</option>
+                <option value="serdarakar"> Serdar Akar </option>
+                <option value="mehmetkarahafiz"> Mehmet Karahafız </option>
+                <option value="tarkankarlidag"> Tarkan Karlıdağ</option>
+                <option value="mehmetadaoztekin"> Mehmet Ada Öztekin</option>
+                <option value="hilalsaral"> Hilal Saral</option>
+                <!-- Buraya istenirse daha fazla özellik eklenebilmektedir -->
+            </select>
+        </div>
+
+        <!--* Category Box for Production Year -->
+        <div class="category-box" id="yapim-yili-box">
+            <img src="./Images/KategoriResim/yapimyili.jpeg" alt="Category Image" id="yapim-yili-image">
+            <h3>Yapım Yılı</h3>
+            <select name="yapim-yili" id="yapim-yili" onchange="updateImage('yapim-yili', this.value)">
+                <option value="2001">2001</option>
+                <option value="2002">2002</option>
+                <option value="2003">2003</option>
+                <option value="2004">2004</option>
+                <option value="2005">2005</option>
+                <option value="2006">2006</option>
+                <option value="2007">2007</option>
+                <option value="2008">2008</option>
+                <option value="2009">2009</option>
+                <option value="2010">2010</option>
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <!-- Buraya istenirse daha fazla özellik eklenebilmektedir -->
+            </select>
+        </div>
+
+    </section>
+
+    <script src="./JS/script.js"></script>
+</body>
+</html>
